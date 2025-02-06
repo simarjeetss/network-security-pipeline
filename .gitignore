@@ -1,2 +1,4 @@
 venv
 .env
+./final_model
+./prediction_output

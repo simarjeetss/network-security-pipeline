@@ -1,6 +1,0 @@
-[ 2025-02-05 22:09:01,368 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK" 
-[ 2025-02-05 22:09:01,372 ] 107 dagshub - INFO - Accessing as simarjeetss 
-[ 2025-02-05 22:09:01,650 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/simarjeetss/network-security-pipeline "HTTP/1.1 200 OK" 
-[ 2025-02-05 22:09:01,871 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK" 
-[ 2025-02-05 22:09:01,881 ] 107 dagshub - INFO - Initialized MLflow to track repo "simarjeetss/network-security-pipeline" 
-[ 2025-02-05 22:09:01,882 ] 107 dagshub - INFO - Repository simarjeetss/network-security-pipeline initialized! 
