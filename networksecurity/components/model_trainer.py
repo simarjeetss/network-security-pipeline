@@ -24,6 +24,9 @@ from sklearn.ensemble import (
 
 import mlflow
 
+import dagshub
+dagshub.init(repo_owner='simarjeetss', repo_name='network-security-pipeline', mlflow=True)
+
 
 class ModelTrainer:
     def __init__(self, model_trainer_config: ModelTrainerConfig, 
@@ -114,6 +117,8 @@ class ModelTrainer:
 
         Network_Model = NetworkModel(preprocessor= preprocessor, model= best_model)
         save_object(self.model_trainer_config.trained_model_file_path, obj= NetworkModel)
+        save_object("final_model/model.pkl", best_model)
+
 
         #model trainer artifact
         model_trainer_artifact = ModelTrainerArtifact(trained_model_file_path= self.model_trainer_config.trained_model_file_path,
@@ -130,7 +135,7 @@ class ModelTrainer:
 
 
 
-    def intiate_model_trainer(self) -> ModelTrainerArtifact:
+    def initiate_model_trainer(self) -> ModelTrainerArtifact:
         try:
             train_file_path = self.data_transformation_artifact.transformed_train_file_path
             test_file_path = self.data_transformation_artifact.transformed_test_file_path
