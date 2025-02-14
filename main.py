@@ -34,7 +34,7 @@ if __name__=='__main__':
         logging.info("Data Transformation Started")
         data_transformation_config = DataTransformationConfig(trainingpipelineconfig)
         data_transformation = DataTransformation(data_validation_artifact, data_transformation_config)
-        data_transformation_artifact = data_transformation.intiate_data_transformation()
+        data_transformation_artifact = data_transformation.initiate_data_transformation()
         logging.info("Data Transformation Completed")
         print(data_transformation_artifact)
 
@@ -42,7 +42,7 @@ if __name__=='__main__':
         logging.info("Model Training Started")
         model_training_config = ModelTrainerConfig(trainingpipelineconfig)
         model_training = ModelTrainer(model_trainer_config=model_training_config, data_transformation_artifact=data_transformation_artifact)
-        model_training_artifact = model_training.intiate_model_trainer()
+        model_training_artifact = model_training.initiate_model_trainer()
         logging.info("Model Training Completed")
         print(model_training_artifact)
 
